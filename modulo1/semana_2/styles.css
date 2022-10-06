@@ -11,3 +11,11 @@
         background-color: green;
     }
 }
+@media (min-width:1000px) and (max-width:999px) {
+    /* Aquí se aplican los estilos de la media query */
+    .responsive-div{
+        background-color: brown;
+        width: 200px;
+    }
+}
+
