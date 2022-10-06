@@ -1,0 +1,13 @@
+.responsive-div {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+  }
+
+/* Media query */
+@media (min-width:1000px) {
+    /* Aquí se aplican los estilos de la media query */
+    .responsive-div{
+        background-color: green;
+    }
+}
