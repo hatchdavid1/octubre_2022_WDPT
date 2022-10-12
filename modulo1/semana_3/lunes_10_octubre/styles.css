@@ -1,0 +1,37 @@
+.container{
+    width: 80%;
+    background: #fff;
+    padding: 10px;
+    margin: 20px;
+    border: 10px solid #2c3e50;
+    /*Usando flex*/
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+/*flex-grow */
+.item:nth-of-type(1){ 
+    flex-grow: 1;
+}
+.item:nth-of-type(2){ 
+    flex-grow: 1;
+}
+.item:nth-of-type(3){ 
+    flex-grow: 1;
+}
+.item:nth-of-type(4){ 
+    flex-grow: 1;
+}
+.item:nth-of-type(5){ 
+    flex-grow: 1;
+}
+
+
+.item{
+    background: rgb(228, 133, 25);
+    margin: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
