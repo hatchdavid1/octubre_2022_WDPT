@@ -2000,12 +2000,45 @@ const movies = [
       genre: ['Comedy', 'Drama'],
       score: 8
     }
-  ];
+];
 
-let eightAvg = movies.filter((movie, index, originalArray)=>{
-    return (movie.score ===8)
-    })
-console.log(parseFloat(((eightAvg[0].score + eightAvg[1].score)/2).toFixed(2)));
+let movies2 = [...new Set(movies.map(titles => titles.title))];
+movies2.sort(function (a,b){
+        return a.localeCompare(b);
+    }
+)
+console.log(movies2);
 
-
-//parseFloat((x ** 0.5).toFixed(5))
+/*
+unction removeWithFilter(arr) {
+    let outputArray = arr.filter(( av , i ) => i == arr.indexOf(av));
+    return outputArray.sort( ( a , b )=> a - b );
+}
+// BONUS - Iteration 8: Best yearly score average - Best yearly score average
+function bestYearAvg(moviesArray) {
+    let resultado = []
+    if(moviesArray.length == 0){
+        return null
+    }else if(moviesArray.length == 1){
+        return `The best year was ${moviesArray[0].year} with an average score of ${moviesArray[0].score}`
+    }else {
+        let years = []
+        let uniqueYears = []
+        let resultado = []
+        moviesArray.forEach((item, index) => {
+            years[index] = item.year;
+        })
+        uniqueYears = removeWithFilter(years);
+        uniqueYears.forEach((item) => {
+            let arreglo = moviesArray.filter( ( av ) => av.year == item)
+            if(arreglo.length == 1){
+                resultado.push({year:item, avg_score:arreglo[0].score })
+            }else{
+                let resultadoAvg = (arreglo.map( obj => obj.score ).reduce((ac, va)=> ac + va))/arreglo.length;
+                resultado.push({year:item, avg_score:parseFloat(resultadoAvg.toFixed(1))})
+            }
+        })
+        resultado.sort(( a , b ) => b.avg_score - a.avg_score );
+        return `The best year was ${resultado[0].year} with an average score of ${resultado[0].avg_score}`
+    }
+} */
