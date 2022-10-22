@@ -43,8 +43,11 @@ console.log(bestStudents);
 
 
 const noLopez = students.filter((student, index, originalArray)=>{
-    return !(student.name.toLowerCase().includes('López'.toLowerCase()) || student.name.toLowerCase().includes('Lopez'.toLowerCase()))
+    return !(student.name.toLowerCase().includes('López'.toLowerCase()) 
+    || student.name.toLowerCase().includes('Lopez'.toLowerCase()))
 });
+
+
 console.log(noLopez);
 
 //reduce .reduce((acumulador, item actual) => acumulador inicializado
@@ -53,3 +56,8 @@ const elements = [1,2,3,4,5,6,7,]
 const sum = elements.reduce((acc, cv) => {
     return acc += cv
 }, 0)
+
+
+
+
+
