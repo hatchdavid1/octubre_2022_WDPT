@@ -21,6 +21,28 @@ class Background{
     }
 }
 
+class Mario{
+    constructor(x,y,width,height){
+        this.x = x; 
+        this.y = y;
+        this.width = width; 
+        this.height = height;
+        this.image1 = new Image()
+        this.image1.src = '';
+        this.image2 = new Image()
+        this.image2.src = '';
+        this.image = this.image1
+    }
+
+    draw(){
+        if (frames %10 ===0){
+            this.image = this.image === this.image1 ? this.image2: this.image1
+        }
+        ctx.drawImage(this.image1,this.x, this.y, this.width, this.height )
+    }
+}
+
+const mario = new Mario(20, 20, 300, 300)
 const fondo = new Background()
 
 function update(){
@@ -29,6 +51,7 @@ function update(){
     // limpieza del canvas
     ctx.clearRect(0,0,canvas.width, canvas.height)
     fondo.draw()
+    mario.draw()
     // Esto es el loop de la app 
     if (requestID){
         requestID = requestAnimationFrame(update)
@@ -43,5 +66,6 @@ function start(){
 function endGame(){
     requestID = undefined;
 }
-
+start()
 update()
+
