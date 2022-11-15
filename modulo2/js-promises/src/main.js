@@ -16,7 +16,21 @@ function obtainDirections(step) {
         setTimeout(()=>{
             console.log('P',directions[step]);
             if(!directions[step]) reject('No hay más rutas')
-            else resolve()
+            else resolve(directions[step])
         }, Math.floor(Math.random()*3000))
     })
 }
+
+const getCoffee = async () => {
+    try{
+        await obtainDirections(0)
+        await obtainDirections(1)
+        await obtainDirections(2)
+        await obtainDirections(3)
+        await obtainDirections(6)
+    }catch{
+        console.log('error try', error);
+    }
+}
+
+getCoffee()
