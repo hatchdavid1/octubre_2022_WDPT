@@ -1,0 +1,23 @@
+{
+  "name": "semana_1",
+  "version": "1.0.0",
+  "description": "Creando una descripcion para el ejemplo ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www.github.com/hatchdavid1.git"
+  },
+  "keywords": [
+    "free",
+    "gratis"
+  ],
+  "author": "David Hatch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/www.github.com/hatchdavid1/issues"
+  },
+  "homepage": "https://github.com/www.github.com/hatchdavid1#readme"
+}
