@@ -19,6 +19,22 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true
+    }, 
+    firstName:{
+      type: String, 
+      minLength:2
+    }, 
+    lastName:{
+      type:String, 
+      minLength:2
+    }, 
+    description:{
+      type:String, 
+      minLength:5
+    }, 
+    avatar:{
+      type:String, 
+      default:'https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png'
     }
   },
   {
