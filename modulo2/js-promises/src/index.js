@@ -36,8 +36,7 @@ function getDirections(step, callback, errorCallback) {
     }, Math.floor(Math.random() * 1000))
 }
 
-/**Callback HEll 
-getDirections(0, ()=>{
+/**Callback HEll getDirections(0, ()=>{
     getDirections(1, ()=>{
         getDirections(2, ()=>{
             getDirections(3, ()=>{
@@ -45,9 +44,7 @@ getDirections(0, ()=>{
             })
         })
     })
-
-}, (error)=>{console.error(error)})
-*/
+}, (error)=>{console.error(error)})  */
 
 function obtainDirections(step) {
     return new Promise((resolve, reject) =>{
