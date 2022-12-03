@@ -1,0 +1,16 @@
+<h1 class="uk-heading-large">Lista de TV Shows</h1>
+
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    {{#each tvhows}}
+    <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">{{name}}</h3>
+            <ul class='uk-list'>
+                {{#each _cast}}
+                <li>{{name}}-----{{studio}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</div>
