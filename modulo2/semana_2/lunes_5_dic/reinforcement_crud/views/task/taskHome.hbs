@@ -1,0 +1,66 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+        {{#if isEdit}}
+         <form
+        action="/task/{{taskEdit._edit}}/edit"
+        method="post"
+        >
+        <div class="mb-3">
+          <label for="title" class="form-label">Título</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Nombre de tarea"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea
+            class="form-control"
+            id="description"
+            rows="3"
+            name="description"
+          >{{taskEdit.description}}
+          </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+      </form>
+        {{else}}
+        <form
+        action="/task/create"
+        method="post"
+        >
+        <div class="mb-3">
+          <label for="title" class="form-label">Título</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Nombre de tarea"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea
+            class="form-control"
+            id="description"
+            rows="3"
+            name="description"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+      </form>
+      {{/if}}
+    </div>
+    <div class="col">
+      Column2
+      {{#each tasks}}
+      {{>cardTask this}}
+      {{/each}}
+    </div>
+  </div>
+</div>
